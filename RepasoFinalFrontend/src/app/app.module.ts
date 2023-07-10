@@ -22,6 +22,10 @@ import { MedicoComponent } from './pages/medico/medico.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { PacienteComponent } from './pages/paciente/paciente.component';
 import { RegistroComponent } from './pages/registro/registro.component';
+import { PagoComponent } from './ecommerce/pago/pago.component';
+import { PagoAdminComponent } from './ecommerce/pago-admin/pago-admin.component';
+import { PagoClienteComponent } from './ecommerce/pago-cliente/pago-cliente.component';
+import { Pagina404Component } from './pagina404/pagina404.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +48,11 @@ import { RegistroComponent } from './pages/registro/registro.component';
     MedicoComponent,
     NosotrosComponent,
     PacienteComponent,
-    RegistroComponent
+    RegistroComponent,
+    PagoComponent,
+    PagoAdminComponent,
+    PagoClienteComponent,
+    Pagina404Component
   ],
   imports: [
     BrowserModule,
