@@ -22,3 +22,23 @@ class UsuariosMedicos(models.Model):
     def __str__(self):
         return "{}".format(self.id)
     
+    
+# Tabla UsuariosPacientes
+class UsuariosPacientes(models.Model):
+    Nombre_UP=models.CharField(max_length=45)
+    Apellido_UP=models.CharField(max_length=45)
+    Email_UP=models.CharField(max_length=45)
+    Clave_UP=models.CharField(max_length=45)
+    Celular_UP=models.CharField(max_length=45,blank=True,default="Celular_UP")
+    Direccion_UP=models.CharField(max_length=100,blank=True,default="Direccion_UP")
+    Localidad_UP=models.CharField(max_length=45,blank=True,default="Localidad_UP")
+    Dni_UP=models.CharField(max_length=8,blank=True,default="Dni_UP")
+    class Meta:
+        db_table="UsuariosPacientes"
+        verbose_name="Usuarios Pacientes"
+        verbose_name_plural="UsuariosPacientes"
+    def __unicode__(self):
+        return "{}".format(self.id)
+    def __str__(self):
+        return "{}".format(self.id)
+    

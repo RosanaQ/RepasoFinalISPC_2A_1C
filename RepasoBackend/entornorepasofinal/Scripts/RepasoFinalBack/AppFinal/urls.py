@@ -5,7 +5,7 @@ from AppFinal import views
 
 router=routers.DefaultRouter()
 router.register(r'usuariosmedicos',views.UsuarioMedicoViewSet)
-
+router.register(r'usuariospacientes',views.UsuarioPacienteViewSet)
 urlpatterns=[
     path('',include(router.urls)),
 ]
