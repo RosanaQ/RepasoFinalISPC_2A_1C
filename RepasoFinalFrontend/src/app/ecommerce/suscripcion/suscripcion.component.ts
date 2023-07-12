@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Suscription } from 'src/app/model/suscription.model';
 
 @Component({
   selector: 'app-suscripcion',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./suscripcion.component.css']
 })
 export class SuscripcionComponent {
+mySuscriptions: Suscription[]= [];
+    
 
 }

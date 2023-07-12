@@ -25,7 +25,7 @@ import { RegistroComponent } from './pages/registro/registro.component';
 import { PagoComponent } from './ecommerce/pago/pago.component';
 import { PagoAdminComponent } from './ecommerce/pago-admin/pago-admin.component';
 import { PagoClienteComponent } from './ecommerce/pago-cliente/pago-cliente.component';
-import { Pagina404Component } from './pagina404/pagina404.component';
+import { Pagina404Component } from './pages/pagina404/pagina404.component';
 
 @NgModule({
   declarations: [
