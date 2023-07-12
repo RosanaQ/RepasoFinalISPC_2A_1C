@@ -42,3 +42,16 @@ class UsuariosPacientes(models.Model):
     def __str__(self):
         return "{}".format(self.id)
     
+# Tabla Servicios
+class Servicios(models.Model):
+    TipoServicio_S=models.CharField(max_length=20)
+    Precio_S=models.DecimalField(max_digits=18,decimal_places=2)
+    Descripcion_S=models.CharField(max_length=1000)
+    class Meta:
+        db_table="Servicios"
+        verbose_name="Tipo de Servicios"
+        verbose_name_plural="Servicios"
+    def __unicode__(self):
+        return self.TipoServicio_S
+    def __str__(self):
+        return self.TipoServicio_S

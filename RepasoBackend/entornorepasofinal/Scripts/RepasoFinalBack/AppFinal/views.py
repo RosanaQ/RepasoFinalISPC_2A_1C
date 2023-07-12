@@ -10,6 +10,9 @@ from .serializers import UsuarioMedicoSerializer
 # Vista a tabla Usuario Pacientes
 from .models import UsuariosPacientes
 from .serializers import UsuarioPacienteSerializer
+# Tabla Servicios
+from .models import Servicios
+from .serializers import ServicioSerializer
 
 # CRUD - ABML
 
@@ -24,4 +27,11 @@ class UsuarioPacienteViewSet(viewsets.ModelViewSet):
 
     queryset=UsuariosPacientes.objects.all()
     serializer_class = UsuarioPacienteSerializer
+    
+    # Tabla Servicios
+class ServiciosViewSet(viewsets.ModelViewSet):
+
+    queryset=Servicios.objects.all()
+    serializer_class = ServicioSerializer
+    
 
