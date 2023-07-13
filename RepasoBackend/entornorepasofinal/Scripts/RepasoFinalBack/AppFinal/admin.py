@@ -6,6 +6,8 @@ from django.contrib import admin
 from .models import UsuariosMedicos
 from .models import UsuariosPacientes
 from .models import Servicios
+# Tabla Ventas
+from .models import Ventas
 
 # Tabla UsuariosMedicos
 class UsuarioMedicoAdmin(admin.ModelAdmin):
@@ -17,6 +19,11 @@ class UsuarioPacienteAdmin(admin.ModelAdmin):
     # Tabla Servicios
 class ServicioAdmin(admin.ModelAdmin):
     list_display=('id','TipoServicio_S','Precio_S','Descripcion_S')
+# Tabla Ventas
+class VentaAdmin(admin.ModelAdmin):
+    #list_display=('id','FechaVenta_V','TotalVenta_V')
+    list_display=('id','FechaVenta_V','TotalVenta_V','id_UP','id_S')
+
 # Registrar tablas
 # Tabla UsuariosMedicos
 admin.site.register(UsuariosMedicos,UsuarioMedicoAdmin)
@@ -25,3 +32,5 @@ admin.site.register(UsuariosMedicos,UsuarioMedicoAdmin)
 admin.site.register(UsuariosPacientes,UsuarioPacienteAdmin)
 # Tabla Servicios
 admin.site.register(Servicios,ServicioAdmin)
+# Tabla Ventas
+admin.site.register(Ventas,VentaAdmin)

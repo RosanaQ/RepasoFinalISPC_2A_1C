@@ -55,3 +55,18 @@ class Servicios(models.Model):
         return self.TipoServicio_S
     def __str__(self):
         return self.TipoServicio_S
+    
+# Tabla Ventas
+class Ventas(models.Model):
+    FechaVenta_V=models.DateField(default=datetime.now)
+    TotalVenta_V=models.DecimalField(max_digits=18,decimal_places=2)
+    id_UP=models.ForeignKey(UsuariosPacientes,on_delete=models.CASCADE)
+    id_S=models.ForeignKey(Servicios,on_delete=models.CASCADE)
+    class Meta:
+        db_table="Ventas"
+        verbose_name="Ventas a Cuentas"
+        verbose_name_plural="Ventas"
+    def __unicode__(self):
+        return "{}".format(self.id)
+    def __str__(self):
+        return "{}".format(self.id)

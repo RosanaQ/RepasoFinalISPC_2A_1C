@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 from rest_framework import viewsets
 
+
+
 # Create your views here.
 # Tabla UsuariosMedicos
 from .models import UsuariosMedicos
@@ -13,6 +15,9 @@ from .serializers import UsuarioPacienteSerializer
 # Tabla Servicios
 from .models import Servicios
 from .serializers import ServicioSerializer
+# Tabla Ventas
+from .models import Ventas
+from .serializers import VentaSerializer
 
 # CRUD - ABML
 
@@ -33,5 +38,10 @@ class ServiciosViewSet(viewsets.ModelViewSet):
 
     queryset=Servicios.objects.all()
     serializer_class = ServicioSerializer
+
+# Tabla Ventas
+class VentasViewSet(viewsets.ModelViewSet):
     
+    queryset=Ventas.objects.all()
+    serializer_class= VentaSerializer
 
