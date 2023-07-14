@@ -1,7 +1,7 @@
 from django.shortcuts import render
-
 from rest_framework import viewsets
-
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
 
 # Create your views here.
@@ -44,4 +44,10 @@ class VentasViewSet(viewsets.ModelViewSet):
     
     queryset=Ventas.objects.all()
     serializer_class= VentaSerializer
-
+# Ventas por cliente
+class verVentasCliente(APIView):
+    #permission_classes = [permissions.IsAuthenticated]
+    def get(self,request,pk=None):
+        ventasCliente=Ventas.objects.filter(id_UP=pk)
+        serializer = VentaSerializer(ventasCliente, many=True)
+        return Response(serializer.data)
