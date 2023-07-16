@@ -1,29 +1,17 @@
-import { Component } from '@angular/core';
-import { Suscription } from 'src/app/model/suscription.model';
+import { Component, OnInit } from '@angular/core';
 import { SuscriptionService } from 'src/app/services/suscription.service';
+import { Suscription } from 'src/app/model/suscription.model';
 @Component({
+
   selector: 'app-suscripcion',
   templateUrl: './suscripcion.component.html',
   styleUrls: ['./suscripcion.component.css']
 })
-export class SuscripcionComponent {
-mySuscriptions: Suscription[]= [];
-constructor(private suscriptionService:SuscriptionService ){}
-private obtenerSuscripciones(){
-  this.suscriptionService.obtenerServicios().subscribe({
-  next: (suscriptionData) => {
-    this.mySuscriptions= suscriptionData;
-
-  },
-  error:(errorData)=> {
-    console.error(errorData);
-  }
-
-  }) 
-  
-  
+export class SuscripcionComponent implements OnInit {
+  mySuscriptions: Suscription[] = [];
+constructor (private suscriptionService: SuscriptionService){}
+ngOnInit(): void {
+this.suscriptionService.getAllSuscriptions().subscribe(data =>{this.mySuscriptions = data});
 }
-
-    
-
+pagarSuscripcion(dato: Suscription){}
 }
