@@ -26,7 +26,7 @@ import { PagoAdminComponent } from './ecommerce/pago-admin/pago-admin.component'
 import { PagoClienteComponent } from './ecommerce/pago-cliente/pago-cliente.component';
 import { Pagina404Component } from './pages/pagina404/pagina404.component';
 import { SuscripcionComponent } from './ecommerce/suscripcion/suscripcion.component';
-
+import {ReactiveFormsModule}  from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -58,7 +58,10 @@ import { SuscripcionComponent } from './ecommerce/suscripcion/suscripcion.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
