@@ -22,5 +22,8 @@ getAllSuscriptions():Observable<Suscription[]>{
     }
   })));
 } 
-
+createSuscription(data:Partial<Suscription>):Observable<Suscription>{
+  console.log('suscripcion: ',data)
+  return this.http.post<Suscription>(this.url3, data);
+}
 }
