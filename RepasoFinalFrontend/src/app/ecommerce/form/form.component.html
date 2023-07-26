@@ -30,13 +30,13 @@
           </div>
         </div> -->
         <!-- SERVICIOS DINAMICOS -->
-        <input class="controls" type="text" name="Descripcion_S" placeholder="Ingrese la descripcion" formControlName="Descripcion_S">
+       <!--  <input class="controls" type="text" name="Descripcion_S" placeholder="Ingrese la descripcion" formControlName="Descripcion_S"> -->
 
-        <!-- <input class="botons" type="button" value="AGREGAR SERVICIO" (click)="addServiciosField()">
+        <input class="botons" type="button" value="AGREGAR SERVICIO" (click)="addServiciosField()">
         <div formArrayName="servicios">
           <div *ngFor="let serv of ServiciosField.controls; let i=index" [formGroupName]="i">
             <input class="controls" type="text" placeholder="Ingrese el servicio N° {{i+1}}"
-              formControlName="servicio"> -->
+              formControlName="servicio">
             <!-- <div *ngIf="serv.get('servicio')?.invalid && (serv.get('servicio')?.dirty || serv.get('servicio')?.touched)" class=" text-danger">
               <div *ngIf="serv.get('servicio')?.errors?.['required']">
                 el Servicio {{i+1}} es requerido.
@@ -45,9 +45,9 @@
                 el Servicio {{i+1}} debe tener al menos 5 caracteres.
               </div>
             </div> -->
-          <!--   <button class="controls" type="button" (click)="eliminarInput(i)">ELIMINAR SERV N° {{i+1}}</button>
-          </div> -->
-        <!-- </div> -->
+            <button class="controls" type="button" (click)="eliminarInput(i)">ELIMINAR SERV N° {{i+1}}</button>
+          </div>
+        </div>
         <input class="botons" type="submit" value="AGREGAR SUSCRIPCION">
       </form>
     </section>
