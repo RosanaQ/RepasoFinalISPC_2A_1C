@@ -26,4 +26,12 @@ createSuscription(data:Partial<Suscription>):Observable<Suscription>{
   console.log('suscripcion: ',data)
   return this.http.post<Suscription>(this.url3, data);
 }
+
+deleteSuscription (id:number): Observable<Suscription>{
+  console.log('Entro servicio borrar suscripción', id);
+  return this.http.delete<Suscription>(`${this.url3}/${id}`);
 }
+
+
+}
+
