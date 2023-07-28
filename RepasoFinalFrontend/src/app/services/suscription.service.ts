@@ -10,7 +10,7 @@ import {Suscription} from '../model/suscription.model';
 export class SuscriptionService {
 url:string='http://localhost:8000/api/v1/servicios';
 url2:string='http://localhost:3000/servicios';
-url3:string="api/v1/servicios/";
+url3:string="api/v1/servicios";
   constructor(private http:HttpClient) { }
 /*Obtiene listado de servicios*/
 getAllSuscriptions():Observable<Suscription[]>{
@@ -32,6 +32,9 @@ deleteSuscription (id:number): Observable<Suscription>{
   return this.http.delete<Suscription>(`${this.url3}/${id}`);
 }
 
+updateSuscription(id:number, data:Partial<Suscription>){console.log("Info que llega al put ",id)
+console.log(data)
+return this.http.put<Suscription>(`${this.url3}/${id}`, data)}
 
 }
 
