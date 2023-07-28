@@ -32,9 +32,9 @@ deleteSuscription (id:number): Observable<Suscription>{
   return this.http.delete<Suscription>(`${this.url3}/${id}`);
 }
 
-updateSuscription(id:number, data:Partial<Suscription>){console.log("Info que llega al put ",id)
+updateSuscription(id:number, data:Suscription): Observable<Suscription>{console.log("Info que llega al put ",id)
 console.log(data)
-return this.http.put<Suscription>(`${this.url3}/${id}`, data)}
+return this.http.put<Suscription>(`${this.url3}/${id}/`, data)}
 
 }
 
