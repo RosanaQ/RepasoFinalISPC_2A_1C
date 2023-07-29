@@ -8,6 +8,7 @@ import { SuscripcionComponent } from './ecommerce/suscripcion/suscripcion.compon
 import { FormComponent } from './ecommerce/form/form.component';
 import { SuscripcionAdminComponent } from './ecommerce/suscripcion-admin/suscripcion-admin.component';
 import { FormEditComponent } from './ecommerce/form-edit/form-edit.component';
+import { RegistroComponent } from './pages/registro/registro.component';
 const routes: Routes = [
   {path:'',redirectTo: '/home', pathMatch: 'full'},
   {path: 'home',component:HomeComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:'formSuscripcion', component:FormComponent},
   {path:'adminSuscripcion', component:SuscripcionAdminComponent},
   {path:'formSuscripcionEdit', component:FormEditComponent},
+  {path:'registro', component:RegistroComponent},
   {path:'**',component:Pagina404Component}
 
 

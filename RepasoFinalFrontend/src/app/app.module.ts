@@ -27,6 +27,7 @@ import { PagoClienteComponent } from './ecommerce/pago-cliente/pago-cliente.comp
 import { Pagina404Component } from './pages/pagina404/pagina404.component';
 import { SuscripcionComponent } from './ecommerce/suscripcion/suscripcion.component';
 import {ReactiveFormsModule}  from '@angular/forms';
+import { SharedServicesComponent } from './services/auth/shared-services/shared-services/shared-services.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import {ReactiveFormsModule}  from '@angular/forms';
     PagoAdminComponent,
     PagoClienteComponent,
     Pagina404Component,
-    SuscripcionComponent
+    SuscripcionComponent,
+    SharedServicesComponent
    ],
   imports: [
     BrowserModule,
@@ -63,7 +65,7 @@ import {ReactiveFormsModule}  from '@angular/forms';
     
     
   ],
-  providers: [],
+  providers: [SharedServicesComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
